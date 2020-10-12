@@ -1,0 +1,60 @@
+@import '../../less/_mixins.less';
+
+.header--wrapper{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fcfcfc;
+  font-family: Source Sans Pro;
+
+  .header--logo {
+    color:white;
+    letter-spacing:-5px;
+    text-transform:uppercase;
+    font-size: 3em;
+    text-shadow: 
+      -1px -1px @blue, 0px 0px @blue, 1px 1px @blue, 2px 2px @blue, 3px 3px @blue, 4px 4px @blue, 5px 5px @blue, 6px 6px @blue, 7px 7px @blue, 8px 8px @blue, 9px 9px @blue, 10px 10px @blue, 11px 11px @blue, 12px 12px @blue, 13px 13px @blue, 14px 14px @blue, 15px 15px @blue, 16px 16px @blue;
+    transform: rotate(-4deg) skewX(-5deg);
+  }
+  
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    li {
+      padding: 0 20px;
+      text-transform: uppercase;
+    }
+
+    
+    .header--link {
+      color: #8D8D8D;
+       transition: all 300ms ease;
+       &:hover {
+         color: @blue;
+       }
+     }
+
+     .header--link__cta {
+      padding: 8px 10px;
+      border: solid 5px;
+      font-size: 1.2rem;
+      position:relative;
+      box-shadow: 
+      1px 1px, 2px 2px, 3px 3px, 4px 4px, 5px 5px, 6px 6px, 7px 7px, 8px 8px;
+      transition: all 300ms ease;
+
+      &.orange {
+        color: @orange;
+         &:hover {
+          color: @orange - 20%;
+        }
+      }
+     }
+    
+  }
+}

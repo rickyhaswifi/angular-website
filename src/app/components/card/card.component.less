@@ -1,0 +1,41 @@
+
+.card--wrapper {
+  height: 300px;
+  background-size: cover;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  margin: 0;
+
+  &:after {
+    transition: all 300ms ease;
+    content: '';
+    position: absolute;
+    width: 100%; height:100%;
+    top:0; left:0;
+    background:rgba(17, 73, 196, 0.6);
+    opacity: 0;
+  }
+  
+  .card--stack, .card--title, .card--subtitle, b {
+    opacity: 0;
+    transition: all 300ms ease;
+    color: white;
+  }
+  
+  &:hover{
+    
+    &:after{
+      opacity: 1;
+    }
+
+    .card--stack, .card--title, .card--subtitle, b {
+      opacity: 1;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
